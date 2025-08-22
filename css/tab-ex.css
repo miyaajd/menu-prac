@@ -9,6 +9,24 @@ a {
   color: #333;
   display: block;
 }
+body {
+  height: 1100px;
+  position: relative;
+}
+/*  */
+/* top */
+#goTop{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    padding: 20px 8px;
+    border-radius: 30px;
+    border: none;
+    background-color: #1d1d1d;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
 /*  */
 .wrap {
   width: 100vw;
@@ -92,8 +110,8 @@ nav {
   position: relative;
   display: none;
 }
-.content.active{
-    display: block;
+.content.active {
+  display: block;
 }
 .content img {
   width: 100%;
@@ -122,3 +140,11 @@ nav {
   font-size: 16px;
   line-height: 1.5;
 }
+#txt span {
+  color: #fff;
+  padding: 10px 15px;
+  border: 0.6px solid #fff;
+  border-radius: 30px;
+  font-size: 12px;
+}
+
