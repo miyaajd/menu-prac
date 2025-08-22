@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>notice</title>
+  </head>
+  <body>
+    <div class="notice">
+      <h2>Notice</h2>
+      <div id="noticeList">
+        <!-- JS출력 -->
+      </div>
+    </div>
+    <script>
+      const notices = [
+        { title: "여름 세일 안내", date: "2025-08-01" },
+        { title: "신규 회원 혜택 이벤트", date: "2025-08-10" },
+        { title: "배송 지연 안내", date: "2025-08-15" },
+        { title: "시스템 점검 공지", date: "2025-08-20" },
+      ];
+      const nLIst = document.querySelector("#noticeList")
+      notices.forEach(function (notice, index) {
+        // console.log(notice);
+        // console.log(index);
+        nLIst.innerHTML += `
+        ${index + 1}. ${notice.title} (${notice.date}) <br>
+        `
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>notice</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      header {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        background-color: #ddd;
+        z-index: 999;
+      }
+      .menu {
+        display: flex;
+        /* gap: 100px; */
+        z-index: 9999;
+        width: 50%;
+        max-width: 500px;
+        /* background-color: #fff; */
+      }
+      .menu li {
+        position: relative;
+        width: calc(100% / 3);
+        line-height: 60px;
+        text-align: center;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .depth2 {
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+      }
+      .depth2 li {
+        width: 100%;
+        text-align: center;
+        font-weight: 400;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        /* background-color: #ccc; */
+      }
+      .depth2 li:hover {
+        font-weight: 500;
+      }
+      .depth2 li.show {
+        opacity: 1;
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <ul class="menu">
+        <li>
+          menu1
+          <ul class="depth2">
+            <li>sub1-1</li>
+            <li>sub1-2</li>
+            <li>sub1-3</li>
+          </ul>
+        </li>
+        <li>
+          menu2
+          <ul class="depth2">
+            <li>sub2-1</li>
+            <li>sub2-2</li>
+            <li>sub2-3</li>
+          </ul>
+        </li>
+        <li>
+          menu3
+          <ul class="depth2">
+            <li>sub3-1</li>
+            <li>sub3-2</li>
+            <li>sub3-3</li>
+          </ul>
+        </li>
+      </ul>
+      <script>
+        const menus = document.querySelectorAll(".menu > li");
+
+        menus.forEach(function (menu, index) {
+          const depth = menu.querySelectorAll(".depth2 > li");
+          menu.addEventListener("click", function () {
+            depth.forEach(function (dep, index) {
+              if (dep.classList.contains("show")) {
+                dep.classList.remove("show");
+              } else {
+                dep.classList.add("show");
+              }
+            });
+          });
+        });
+      </script>
+    </header>
+  </body>
+</html>

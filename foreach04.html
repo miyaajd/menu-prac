@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>notice</title>
+    <style>
+      .menu {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ddd;
+        cursor: pointer;
+      }
+      .menu.active {
+        background-color: #aaa;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">홈</div>
+    <div class="menu">상품</div>
+    <div class="menu">이벤트</div>
+    <div class="menu">마이페이지</div>
+    <script>
+      const menus = document.querySelectorAll(".menu");
+      // menus.forEach(function (menu, index) {
+      //   menu.addEventListener("click" , function(){
+      //     if(menu.classList.contains("active")){
+      //       menu.classList.remove("active")
+      //     }else {
+      //       menu.classList.add("active")
+      //     }
+      //   })
+      // });
+      //
+      menus.forEach(function (menu, index) {
+        // console.log(menu);
+        menu.addEventListener("click", function () {
+          menus.forEach(function (m) {
+            m.classList.remove("active");
+          });
+          menu.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

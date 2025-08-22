@@ -1,0 +1,21 @@
+@charset "utf-8";
+.accordion{
+    width: 50%;
+    max-width: 500px;
+    /* background-color: #ddd; */
+}
+.menu{
+    cursor: pointer;
+    padding: 10px;
+    /* background-color: #ddd; */
+}
+.submenu{
+    display: none;
+    padding: 10px 20px;
+}
+.submenu.active{
+    display: block;
+}
+.submenu > li{
+    padding: 10px 20px;
+}

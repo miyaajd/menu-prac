@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>practice</title>
+  </head>
+  <body>
+    <script>
+      const peoples = [
+        {
+          name: "동미",
+          age: 28,
+          city: "Daegu",
+        },
+        {
+          name: "기호",
+          age: 33,
+          city: "Daegu",
+        },
+        {
+          name: "수빈",
+          age: 28,
+          city: "Seoul",
+        },
+      ];
+      peoples.forEach(function (people, index) {
+        console.log(people);
+        console.log(index);
+        document.write(`
+        이름 : ${people.name}, 나이: ${people.age}, 도시: ${people.city} <br>
+        `)
+      });
+    </script>
+  </body>
+</html>
