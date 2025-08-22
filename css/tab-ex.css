@@ -15,17 +15,17 @@ body {
 }
 /*  */
 /* top */
-#goTop{
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    padding: 20px 8px;
-    border-radius: 30px;
-    border: none;
-    background-color: #1d1d1d;
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
+#goTop {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  padding: 20px 8px;
+  border-radius: 30px;
+  border: none;
+  background-color: #1d1d1d;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
 }
 /*  */
 .wrap {
@@ -76,9 +76,12 @@ nav {
   font-weight: 500;
   /* background-color: #efefef; */
 }
-.tab-nav a:hover {
+.tab-nav a.active {
   background-color: #efefef;
 }
+/* .tab-nav a:hover {
+  background-color: #efefef;
+} */
 /* CLOSE */
 #close {
   font-size: 10px;
@@ -147,4 +150,3 @@ nav {
   border-radius: 30px;
   font-size: 12px;
 }
-

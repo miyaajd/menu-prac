@@ -20,10 +20,14 @@ window.addEventListener("load", function () {
   //
   menus.forEach((menu, index) => {
     menu.addEventListener("click", () => {
+      menus.forEach((m) => {
+        m.classList.remove("active");
+      });
       content.forEach((c) => {
         c.classList.remove("active");
       });
       content[index].classList.add("active");
+      menu.classList.add("active");
     });
   });
   //
